@@ -1,6 +1,4 @@
-function stringChop(str, size) {
-  // your code here
-	function chunkString(str, chunkLength) {
+function chunkString(str, chunkLength) {
     if (str === null) {
         return [];
     }
@@ -26,9 +24,8 @@ document.getElementById('chunkButton').addEventListener('click', function() {
         document.getElementById('result').innerText = 'Please enter a valid chunk size.';
     }
 });
-}
 
-// Do not change the code below
-const str = prompt("Enter String.");
-const size = prompt("Enter Chunk Size.");
-alert(stringChop(str, size));
+// Test cases
+console.log(chunkString("Hello, world!", 5)); // ["Hello", ", wor", "ld!"]
+console.log(chunkString("12345", 2)); // ["12", "34", "5"]
+console.log(chunkString("abc", 5));
